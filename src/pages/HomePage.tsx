@@ -1,38 +1,92 @@
 import { useNavigate } from "react-router-dom";
-import cafeBanner from "@/assets/cafe-banner.jpg";
-import cafeLogo from "@/assets/cafe-logo.png";
+import { motion } from "framer-motion";
 
 const HomePage = () => {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      {/* Hero */}
-      <div className="relative w-full h-[55vh] overflow-hidden">
-        <img src={cafeBanner} alt="Brew & Bite Café" className="w-full h-full object-cover" width={1280} height={720} />
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
-      </div>
 
-      {/* Content */}
-      <div className="flex-1 flex flex-col items-center px-6 -mt-24 relative z-10">
-        <div className="w-20 h-20 rounded-full bg-card shadow-lg flex items-center justify-center mb-4 border-4 border-card">
-          <img src={cafeLogo} alt="Logo" className="w-14 h-14 object-contain" width={512} height={512} />
-        </div>
-        <h1 className="font-display text-3xl font-bold text-primary-foreground mb-1">Brew & Bite</h1>
-        <p className="text-primary-foreground/80 font-body text-sm mb-8">Artisan Coffee & Fresh Bites</p>
+      {/* 🔥 HERO SECTION */}
+      <div className="relative h-[70vh] flex items-center justify-center text-center">
+        <img
+          src="src/assets/biriyani.png"
+          //src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=2070"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
 
-        <div className="bg-card rounded-2xl shadow-xl p-8 w-full max-w-sm text-center animate-fade-in">
-          <p className="text-muted-foreground text-sm uppercase tracking-widest mb-2 font-body">Welcome</p>
-          <h2 className="font-display text-2xl font-semibold text-foreground mb-2">Scan & Order</h2>
-          <p className="text-muted-foreground text-base mb-8">Skip the line, grab your favorites.</p>
+        <div className="absolute inset-0 bg-black/50" />
+
+        <div className="relative z-10 text-white px-4">
+          <h1 className="text-5xl font-bold mb-4">
+            Brew & Bite 
+          </h1>
+          <p className="text-lg mb-6">
+            Fresh coffee. Delicious bites. Delivered fast.
+          </p>
+
           <button
             onClick={() => navigate("/menu")}
-            className="w-full bg-primary text-primary-foreground font-body font-semibold py-4 rounded-xl text-lg transition-all hover:opacity-90 active:scale-[0.98]"
+            className="bg-primary px-6 py-3 rounded-xl text-lg font-semibold hover:scale-105 transition"
           >
-            Start Ordering
+            Order Now
           </button>
         </div>
       </div>
+
+      {/* 🔥 FEATURES SECTION */}
+      <div className="py-12 px-6 text-center">
+        <h2 className="text-3xl font-bold mb-8">Why Choose Us?</h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.05 }}
+            className="p-6 bg-card rounded-xl shadow cursor-pointer"
+          >
+            <h3 className="text-xl font-semibold mb-2">⚡ Fast Delivery</h3>
+            <p>Get your food in minutes, not hours.</p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            whileHover={{ scale: 1.05 }}
+            className="p-6 bg-card rounded-xl shadow cursor-pointer"
+          >
+            <h3 className="text-xl font-semibold mb-2">🍃 Fresh Ingredients</h3>
+            <p>We use only fresh and high-quality ingredients.</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            whileHover={{ scale: 1.05 }}
+            className="p-6 bg-card rounded-xl shadow cursor-pointer"
+          >
+            <h3 className="text-xl font-semibold mb-2">🍃 Fresh Ingredients</h3>
+            <p>We use only fresh and high-quality ingredients.</p>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* 🔥 CTA SECTION */}
+      <div className="py-12 text-center">
+        <h2 className="text-2xl font-bold mb-4">
+          Ready to order?
+        </h2>
+
+        <button
+          onClick={() => navigate("/menu")}
+          className="bg-primary px-6 py-3 rounded-xl text-lg font-semibold hover:scale-105 transition"
+        >
+          Explore Menu
+        </button>
+      </div>
+
     </div>
   );
 };
