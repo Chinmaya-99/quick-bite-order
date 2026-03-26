@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-
+import biriyani from "../assets/biriyani.png";
 const HomePage = () => {
   const navigate = useNavigate();
 
@@ -9,11 +9,15 @@ const HomePage = () => {
 
       {/* 🔥 HERO SECTION */}
       <div className="relative h-[70vh] flex items-center justify-center text-center">
+  
         <img
-          src="src/assets/biriyani.png"
-          //src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=2070"
+          src={biriyani}
+          className="absolute inset-0 w-full h-full object-cover"
+        /><img
+          src={biriyani}
           className="absolute inset-0 w-full h-full object-cover"
         />
+
 
         <div className="absolute inset-0 bg-black/50" />
 
