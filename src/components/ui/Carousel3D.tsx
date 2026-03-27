@@ -6,7 +6,7 @@ export default function Carousel3D() {
 
   return (
     <div
-      className="w-full h-[350px] flex items-center justify-center overflow-hidden relative"
+      className="w-full h-[450px] flex items-center justify-center overflow-hidden relative"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -15,11 +15,11 @@ export default function Carousel3D() {
         style={{
           width: "100px",
           height: "150px",
-          top: "25%",
+          top: "40%",
           left: "calc(50% - 50px)",
           transformStyle: "preserve-3d",
           transform: "perspective(1000px)",
-          animation: "rotate 20s linear infinite",
+          animation: "rotate 45s linear infinite",
           animationPlayState: paused ? "paused" : "running",
 
         }}

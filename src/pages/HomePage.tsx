@@ -39,7 +39,7 @@ const HomePage = () => {
           </button>
         </div>
       </div>
-      <Carousel3D />
+     <Carousel3D />
 
       {/* 🔥 FEATURES SECTION */}
       <div className="py-12 px-6 text-center">
