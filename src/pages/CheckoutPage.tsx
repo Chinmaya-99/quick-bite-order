@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
 // 👇 Replace with the café owner's WhatsApp number (with country code, no + or spaces)
-const CAFE_WHATSAPP = "8847841397";
+const CAFE_WHATSAPP = "918847841397";
 
 const CheckoutPage = () => {
   const [name, setName] = useState("");
