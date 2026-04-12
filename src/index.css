@@ -103,3 +103,24 @@
     font-family: var(--font-body);
   }
 }
+@keyframes rotate {
+  from {
+    transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-15deg) rotateY(360deg);
+  }
+}
+.inner:hover {
+  animation-play-state: paused;
+}
+
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: scale(1.2) !important;
+  z-index: 10;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}

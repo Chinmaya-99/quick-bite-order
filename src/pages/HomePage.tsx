@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import biriyani from "../assets/biriyani.png";
+import Carousel3D from "../components/ui/Carousel3D";
+
 const HomePage = () => {
   const navigate = useNavigate();
 
@@ -37,6 +39,7 @@ const HomePage = () => {
           </button>
         </div>
       </div>
+     <Carousel3D />
 
       {/* 🔥 FEATURES SECTION */}
       <div className="py-12 px-6 text-center">
